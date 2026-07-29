@@ -21,28 +21,31 @@ online store — ~20.7M raw events (`view`, `cart`, `remove_from_cart`, `purchas
 - **Tools:** DBeaver, VS Code, Jupyter, Git/GitHub
 
 ## 📁 Project Structure
+
+```
 ecommerce-conversion-optimization/
 │
 ├── data/
-│ ├── raw/ # original CSV files (not tracked in git)
-│ └── processed/ # cleaned & aggregated data (not tracked in git)
+│   ├── raw/                          # original CSV files (not tracked in git)
+│   └── processed/                    # cleaned & aggregated data (not tracked in git)
 ├── sql/
-│ ├── schema.sql
-│ └── queries/
-│ ├── 01_data_cleaning.sql
-│ ├── 02_diagnostics.sql
-│ └── 03_feature_engineering.sql
+│   ├── schema.sql
+│   └── queries/
+│       ├── 01_data_cleaning.sql
+│       ├── 02_diagnostics.sql
+│       └── 03_feature_engineering.sql
 ├── notebooks/
-│ ├── 01_python_setup_and_load.ipynb
-│ ├── 02_eda_funnel.ipynb
-│ ├── 03_segmentation.ipynb
-│ ├── 04_category_analysis.ipynb
-│ ├── 05_ml_modeling.ipynb
-│ └── 06_ab_testing.ipynb
+│   ├── 01_python_setup_and_load.ipynb
+│   ├── 02_eda_funnel.ipynb
+│   ├── 03_segmentation.ipynb
+│   ├── 04_category_analysis.ipynb
+│   ├── 05_ml_modeling.ipynb
+│   └── 06_ab_testing.ipynb
 ├── src/
-│ └── purchase_prediction_model.pkl
-├── visuals/ # exported charts (PNG)
+│   └── purchase_prediction_model.pkl
+├── visuals/                          # exported charts (PNG)
 └── requirements.txt
+```
 
 ## 🔍 Key Findings
 
@@ -79,6 +82,7 @@ sessions that end in a purchase.
 A full A/B testing methodology was demonstrated (power analysis → sample 
 size → significance testing) on a simulated button-color experiment, 
 detecting a **15%** relative lift as statistically significant (**p < 0.001**).
+
 > Note: the A/B test uses simulated outcomes on real session data to 
 > demonstrate methodology — the underlying dataset has no real experiment.
 
@@ -109,7 +113,7 @@ detecting a **15%** relative lift as statistically significant (**p < 0.001**).
 | A/B test significance | p < 0.001 |
 
 ## 🚀 How to Run
-1. Clone the repo and download the dataset from Kaggle into `data/raw/`
+1. Clone the repo and download the sdataset from Kaggle into `data/raw/`
 2. `pip install -r requirements.txt`
 3. Load data into PostgreSQL: `psql -U postgres -d ecommerce_cosmetics -f sql/schema.sql`
 4. Run `sql/queries/` scripts in order (01 → 03)
