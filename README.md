@@ -113,7 +113,7 @@ detecting a **15%** relative lift as statistically significant (**p < 0.001**).
 | A/B test significance | p < 0.001 |
 
 ## 🚀 How to Run
-1. Clone the repo and download the sdataset from Kaggle into `data/raw/`
+1. Clone the repo and download the dataset from Kaggle into `data/raw/`
 2. `pip install -r requirements.txt`
 3. Load data into PostgreSQL: `psql -U postgres -d ecommerce_cosmetics -f sql/schema.sql`
 4. Run `sql/queries/` scripts in order (01 → 03)
