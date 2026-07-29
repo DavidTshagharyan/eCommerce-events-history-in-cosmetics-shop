@@ -20,7 +20,7 @@ online store — ~20.7M raw events (`view`, `cart`, `remove_from_cart`, `purchas
 - **Libraries:** Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn, SQLAlchemy, Statsmodels
 - **Tools:** DBeaver, VS Code, Jupyter, Git/GitHub
 
-## 📁 Project Structure
+## 📁 Project Structure```
 ecommerce-conversion-optimization/
 │
 ├── data/
@@ -42,7 +42,7 @@ ecommerce-conversion-optimization/
 ├── src/
 │ └── purchase_prediction_model.pkl
 ├── visuals/ # exported charts (PNG)
-└── requirements.txt
+└── requirements.txt```
 
 ## 🔍 Key Findings
 
